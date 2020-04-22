@@ -37,8 +37,8 @@ class Maksekeskus:
     def get_payment_methods(self, request_params):
         return requests.get(self.compose_url('/v1/methods'), request_params, auth=HTTPBasicAuth(self.shop_id, self.secret_key))
 
-    def create_transaction(self, request_params):
-        return requests.post(self.compose_url('/v1/transactions'), request_params, auth=HTTPBasicAuth(self.shop_id, self.secret_key))
+    def create_transaction(self, json):
+        return requests.post(self.compose_url('/v1/transactions'), json=json, auth=HTTPBasicAuth(self.shop_id, self.secret_key))
 
 
 # maksekeskus = Maksekeskus(
