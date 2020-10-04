@@ -41,15 +41,3 @@ class Maksekeskus:
         return requests.post(self.compose_url('/v1/transactions'), json=json, auth=HTTPBasicAuth(self.shop_id, self.secret_key))
 
 
-# maksekeskus = Maksekeskus(
-#     'f7741ab2-7445-45f9-9af4-0d0408ef1e4c',
-#     'zPA6jCTIvGKYqrXxlgkXLzv3F82Mjv2E',
-#     'pfOsGD9oPaFEILwqFLHEHkPf7vZz4j3t36nAcufP1abqT9l99koyuC1IWAOcBeqt',
-#     True
-# )
-# # shop_response = maksekeskus.get_shop()
-# payment_methods_response = maksekeskus.get_payment_methods(None)
-# # pprint(shop_response.json())
-# pprint(payment_methods_response.json())
-
-
